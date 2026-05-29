@@ -1,0 +1,10 @@
+services:
+    esports-bot:
+        build: .
+        container_name: esports_discord_bot
+        restart: unless-stopped
+        environment:
+            - PANDASCORE_TOKEN=feRbQhlfbstept_-ja1B3uWOL6hto2hROaX7bGL14qN7dXJAKXw
+            - DISCORD_WEBHOOK=https://discord.com/api/webhooks/1509890738404462662/apvRFqe8CsNymDXKs99La32vo3_5BxWhZk1TRh2gjFJs7eXK_uT3uvRNMndBd0LD3Ufy
+        volumes:
+            - ./data:/app/data
